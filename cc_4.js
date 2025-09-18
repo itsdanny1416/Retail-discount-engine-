@@ -24,7 +24,14 @@ for (let product of products) {
         default:
             break;    
 
-
+function applycutomerdiscount (total, customertype) {
+    if (custoemrtype ==="student") {
+        return total * 0.95; 
+     } elsen if (customertype === "senior") {
+        return total * 0.93;
+        } else {        
+            return total;
+     }
+}
 
             
-        
