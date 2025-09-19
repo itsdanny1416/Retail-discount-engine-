@@ -11,27 +11,55 @@ let products = [
 
 for (let product of products) {
     switch (product.category) {
-        case "electronics":
+        case "eletronics":
             product.price *= 0.8;
             break; 
-        case "apparel"
-        product.price *= 0.85;
-        break;
-        case "grocieries":
-        case "household" :
+        case "aparel":
+            product.price *= 0.85;
+            break;
+        case "grocery":
+        case "household":
             product.price *= 0.9;
             break;
         default:
-            break;    
+            break;
+    }
+}
 
-function applycutomerdiscount (total, customertype) {
-    if (custoemrtype ==="student") {
+function applyCustomerDiscount(total, customerType) {
+    if (customerType === "student") {
         return total * 0.95; 
-     } elsen if (customertype === "senior") {
+    } else if (customerType === "senior") {
         return total * 0.93;
-        } else {        
-            return total;
-     }
+    } else {        
+        return total;
+    }
+}
+
+const customerTypes = ["student", "senior", "regular"];
+
+for (let i = 0; i < 3; i++)   {
+    let total = 0;
+    for (let product of products) {
+        total += product.price;
+          product.invenotory -= 1; 
+    }
+    total = applyCustomerDiscount(total, customerType);
+    console.log(`Total for ${customerType}: $${total.toFixed(2)}`);
 }
 
             
+total =applyCustomerDiscount(total, customerType);
+console.log(`Cutomer ${customerType} Total : $${total.toFixed(2)}`);
+
+duct = products [0];
+n examplepProduct {
+    ${key}: ${examplepProduct[key]  }
+    
+    ct of products{
+        =Object.entries(product);
+        y, value of entries {
+        g(`${key}: ${value}`);
+            
+        "---");
+   
