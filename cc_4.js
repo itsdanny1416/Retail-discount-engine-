@@ -31,8 +31,8 @@ for (let product of products) {
             discount = 0
             break;
     }
-    let promoPrice = product.price * (1-discount);
-    product.promoPrice = promoPrice.toFixed(2);
+    let promoPrice = product.price * (1-discount)
+    product.promoPrice = promoPrice.toFixed(2)
 };
 
 let customerType = "regular"; 
@@ -46,7 +46,7 @@ let customerType = "regular";
         customerDiscount = 0;
     };
     
-    let customer = [
+    const customers = [
         { name: "Alice", type: "student", cart: [products[0]]}, 
         { name: "Bob", type: "senior", cart: [products[1]]},
         { name: "Charlie", type: "regular", cart: [products[2]]},
@@ -80,12 +80,10 @@ console.log("---");
 };
 
 
-
-
 console.log("\\product example :)");
 let exampleProduct =  products[0];
 for (let key in exampleProduct) {
-    console.log(`${key}: ${exampleProduct[key]}`);
+    console.log(key + ": " + exampleProduct[key]);
     console.log("---");
 };
 
