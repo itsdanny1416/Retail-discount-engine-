@@ -55,7 +55,7 @@ let customerType = "regular";
 
 
 console.log("--- Customer Purchases ---");
-for (let i = 0; i < customerTypes.length; i++)   {
+for (let i = 0; i < customers.length; i++)   {
     let customer = customers[i];
     let subtotal = 0;
 
@@ -91,9 +91,8 @@ for (let key in exampleProduct) {
 
 console.log("--- All Products ---");
 for( let product of products) {
-    let entries = object.entries(product);
-    for (let [key, value] of entries) {
-        console.log(`${key}: ${value}`);
+    for (let[key, value] of Object.entries(product)) {
+        console.log(key + ": " + value);
     }
     console.log("---");
 };
